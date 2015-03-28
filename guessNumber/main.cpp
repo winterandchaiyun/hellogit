@@ -55,7 +55,7 @@ int guess(){
     for (int p=0;p<7;++p){
         numA=0; numB=0;
         for (int j=0;j<3;++j){
-            cout << "input the Number " << j+1 <<" you guess:";
+            cout << "input the Number " << j+1 <<" you guess:";  //check the validity
             while(!(cin>>guessNum[j])){
                 cin.clear();cin.sync();
                 cout << "not a number.Please try again!"<<endl;
