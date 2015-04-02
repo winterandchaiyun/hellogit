@@ -103,8 +103,8 @@ int judge(){
     comSum=comGet[0]+comGet[1];
     j=2;
 
-    while(comSum<manSum){
-        comGet[j]=deal();
+    while(comSum<manSum||comSum<=11){                        //a strategy of the computer.
+        comGet[j]=deal();                                   //In case that both get 10 points and then the computer stops
         comSum += comGet[j++];
         if (comSum>21) {
             cout << "Computer's grades exceed 21!" <<endl;
@@ -126,7 +126,7 @@ int main(){
     bool continual=1;
 
     while(continual){
-        cui=0;
+        cui=0;                                                    //restart to set up the cardUsed from index 0 
         op=judge();
         switch(op){                                         //show the corresponding result
             case 1:cout << "You win!" <<endl;break;
