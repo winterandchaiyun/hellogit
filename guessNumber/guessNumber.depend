@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1427543892 source:c:\documents\github\hellogit\guessnumber\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+

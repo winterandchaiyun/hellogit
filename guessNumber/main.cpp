@@ -48,15 +48,18 @@ int guess(){
                 flag=false; break;}
         if (flag) {
             originalNums[i]=temp;
-            cout << temp;
+            //cout << temp;                       //used to test
             ++i;}
     }
 
     for (int p=0;p<7;++p){
         numA=0; numB=0;
-        cout << "input the three numbers you guess:";
         for (int j=0;j<3;++j){
-            cin >> guessNum[j];
+            cout << "input the Number " << j+1 <<" you guess:";
+            while(!(cin>>guessNum[j])){
+                cin.clear();cin.sync();
+                cout << "not a number.Please try again!"<<endl;
+            }
         }
         for (int j=0;j<3;++j){
             q=0; w=0;
