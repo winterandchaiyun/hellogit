@@ -59,13 +59,16 @@ float deal(){
 //effect:check the validity of input
 bool check(){
     char willing[20];                        //use character string in case of repetitive reminding
-    while(true){
+    int except=1;
+    try{
         cin >> willing;
         if ( (strcmp(willing,"N")==0) || (strcmp(willing,"n")==0) ) return false;
         else if ((strcmp(willing,"y")==0) || (strcmp(willing,"Y")==0)) return true;
-             else{
-                cout << "Please input the proper data(y/n):";
-                continue; }                           //ensure the answer to be y/Y/n/N
+            else throw except;
+    }
+    catch(int){
+        cout << "Please input the proper data(y/n):";
+        return check()      //input again
     }
 }
 
